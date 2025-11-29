@@ -72,7 +72,7 @@ Book Management
 
 
 # 1. Register Admin
-curl -X POST http://localhost:5000/register \
+curl -X POST http://localhost:8080/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Admin User",
@@ -82,7 +82,7 @@ curl -X POST http://localhost:5000/register \
   }'
 
 # 2. Login (copy token from response)
-curl -X POST http://localhost:5000/login \
+curl -X POST http://localhost:8080/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@bookstore.com",
@@ -90,7 +90,7 @@ curl -X POST http://localhost:5000/login \
   }'
 
 # 3. Create Book (Admin only - use Bearer token)
-curl -X POST http://localhost:5000/ \
+curl -X POST http://localhost:8080/ \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
